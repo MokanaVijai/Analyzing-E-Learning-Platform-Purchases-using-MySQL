@@ -140,19 +140,25 @@ Key Insights
 
 
 Recommendations
+
 • Focus Marketing on High-Performing Categories
 Promote top-selling categories like Programming and Analytics through targeted campaigns.
+
 • Improve Visibility of Low-Performing Courses
 Offer discounts, bundles, or advertisements for courses with low or zero purchases.
+
 • Encourage Cross-Category Learning
 Recommend related courses to learners who already purchased from one category.
+
 • Analyze Pricing Strategy
 Compare pricing and demand to identify the optimal course pricing structure.
+
 • Track Learner Preferences
 Use purchase history to personalize future course recommendations.
 
 
 Conclusion
-The project successfully demonstrated how SQL can be used to analyze e-learning platform data. Using joins, aggregation, grouping, and sub queries helped identify revenue trends, learner behavior, and course performance, supporting better business decision-making.
+	
+	The project successfully demonstrated how SQL can be used to analyze e-learning platform data. Using joins, aggregation, grouping, and sub queries helped identify revenue trends, learner behavior, and course performance, supporting better business decision-making.
 
 
