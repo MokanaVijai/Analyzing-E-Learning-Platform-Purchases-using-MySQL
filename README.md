@@ -15,12 +15,14 @@ create table learners(
 		learner_id int Primary Key,
 		full_name varchar(50),
 		Country varchar(50));
+
 create table courses(
 		course_id int Primary Key,
 		course_name varchar(100),
         category varchar(50),
        unit_price bigint
         );
+
 create table purchases(
 purchase_id int Primary Key, 
 learner_id int,
@@ -30,7 +32,8 @@ purchase_date date,
       Foreign Key(learner_id) references learners(learner_id),
 		Foreign Key(course_id) references courses(course_id);
         		); 
-•
+
+
 •	Table insertion:
 o	5 learners, 5 course, 6, purchases
 insert into learners(learner_id,full_name , Country)
@@ -60,6 +63,8 @@ values(40, 1, 30, 1, '2026-05-01'),
 
  
 Use SQL INNER JOIN, LEFT JOIN, and RIGHT JOIN to:
+
+
 select l.learner_id,l.full_name, c.course_name, c.category, p.quantity,p.purchase_date ,  c.unit_price , (quantity *unit_price) as total_amount
 from learners l left join purchases p
 on l.learner_id = p.learner_id 
@@ -110,23 +115,30 @@ select course_name from courses where course_id not in (select course_id from pu
 Analyzing E-Learning Platform Purchases using MySQL
 Project Overview
 This project analyzes learner purchases in an e-learning platform using MySQL. The database contains learner details, course information, and purchase transactions. SQL joins and analytical queries were used to generate business insights regarding revenue, learner behavior, and course performance.
+
 Key Insights
 1. Top Performing Courses
 •	Courses with high purchase quantities generated the highest revenue. 
 •	“Python Data Analysis” was among the most purchased courses. 
+
 2. Revenue Analysis
 •	Revenue was calculated using: quantity × unit_price
 •	Python Data Analysis” course contributed high revenue because it was purchased multiple times and in larger quantities.
 •	 Programming and Analytics performed strongly due to consistent learner demand.
+
 3. Learner Purchase Behavior
 •	Certain learners purchased courses from multiple categories, showing broader learning interests. 
 •	This indicates opportunities for cross-selling related courses. 
+
 4. Category Performance
 •	Course categories such as Programming and Analytics showed strong engagement. 
 •	Categories with lower purchase counts may require additional promotion. 
+
 5. Unpurchased Courses
 •	Some courses were never purchased. 
 •	This may indicate low visibility, pricing concerns, or reduced learner demand. 
+
+
 Recommendations
 • Focus Marketing on High-Performing Categories
 Promote top-selling categories like Programming and Analytics through targeted campaigns.
@@ -138,6 +150,8 @@ Recommend related courses to learners who already purchased from one category.
 Compare pricing and demand to identify the optimal course pricing structure.
 • Track Learner Preferences
 Use purchase history to personalize future course recommendations.
+
+
 Conclusion
 The project successfully demonstrated how SQL can be used to analyze e-learning platform data. Using joins, aggregation, grouping, and sub queries helped identify revenue trends, learner behavior, and course performance, supporting better business decision-making.
 
