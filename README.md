@@ -1,16 +1,15 @@
 # Analyzing-E-Learning-Platform-Purchases-using-MySQL
 
 “Analyzing E-Learning Platform Purchases using MySQL”
-
 Tasks
 1.	Database and table creation
+
 create database ELearning_Platform;
 use ELearning_Platform;
 create table learners(
 		learner_id int Primary Key,
 		full_name varchar(50),
-		Country varchar(50)
-        );
+		Country varchar(50));
 create table courses(
 		course_id int Primary Key,
 		course_name varchar(100),
@@ -26,9 +25,7 @@ purchase_date date,
       Foreign Key(learner_id) references learners(learner_id),
 		Foreign Key(course_id) references courses(course_id);
         		); 
-•	 
- 
-
+•
 •	Table insertion:
 o	5 learners, 5 course, 6, purchases
 insert into learners(learner_id,full_name , Country)
@@ -53,14 +50,9 @@ values(40, 1, 30, 1, '2026-05-01'),
 (43, 4, 33, 3, '2026-05-04'),
 (44, 5, 34, 11, '2026-05-04'),
 (45, 5, 30, 2, '2026-05-05'),
-(46, 2, 31, 9, '2026-05-06');
+(46, 2, 31, 9, '2026-05-06')
 
 
-
- 
-
- 
- 
  
 Use SQL INNER JOIN, LEFT JOIN, and RIGHT JOIN to:
 select l.learner_id,l.full_name, c.course_name, c.category, p.quantity,p.purchase_date ,  c.unit_price , (quantity *unit_price) as total_amount
@@ -108,10 +100,6 @@ having count(distinct c.category) > 1;
 Q5. Identify courses that have not been purchased at all.
 select course_name from courses where course_id not in (select course_id from purchases );
  
-
-
-
-
 
 
 Analyzing E-Learning Platform Purchases using MySQL
