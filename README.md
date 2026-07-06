@@ -4,8 +4,13 @@
 Tasks
 1.	Database and table creation
 
+
+
+
 create database ELearning_Platform;
 use ELearning_Platform;
+
+
 create table learners(
 		learner_id int Primary Key,
 		full_name varchar(50),
